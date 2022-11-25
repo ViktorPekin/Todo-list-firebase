@@ -1,0 +1,53 @@
+// main: ../../index.less
+
+.todoList {
+  padding-top: 60px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #373f41;
+  }
+  &__button-add {
+    width: 400px;
+    height: 40px;
+    background-color: #3c64b1;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  &__container {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .todoList {
+    max-width: 95%;
+    padding-top: 30px;
+    &__container {
+      max-width: 95%;
+    }
+    &__button-add {
+      max-width: 95%;
+    }
+  }
+}

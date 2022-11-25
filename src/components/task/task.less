@@ -1,0 +1,110 @@
+// main: ../../index.less
+
+.task {
+  padding: 10px;
+  margin: 10px 0 0 0;
+  width: 600px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1.3px solid #3c64b1;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    margin: 0 0 5px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #373f41;
+    &_task-completed {
+      color: green;
+      text-align: end;
+    }
+    &_end-time {
+      color: red;
+      text-align: end;
+    }
+  }
+  &__task {
+    margin: 0 0 5px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #373f41;
+  }
+  &__end-time {
+    margin: 0 0 5px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #373f41;
+  }
+  &__file {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #373f41;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  &__button {
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #3c64b1;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .task {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .task {
+    flex-direction: column;
+    &__buttons {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &__button {
+      margin: 10px 0 0 0;
+    }
+  }
+}
